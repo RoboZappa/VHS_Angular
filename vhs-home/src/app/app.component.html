@@ -1,0 +1,37 @@
+
+<div container>
+  <div fxLayout="column" side>
+    <mat-list options>
+      <mat-list-item (click)="switchComponent('home')" 
+      [ngClass]="{ 'option': activeComponent !== 'home', 'selected': activeComponent === 'home' }">Home</mat-list-item>
+      <mat-list-item  (click)="switchComponent('about')"
+      [ngClass]="{ 'option': activeComponent !== 'about', 'selected': activeComponent === 'about' }">About Me</mat-list-item>
+      <mat-list-item  (click)="switchComponent('resume')"
+      [ngClass]="{ 'option': activeComponent !== 'resume', 'selected': activeComponent === 'resume' }">Dev History</mat-list-item>
+      <mat-list-item  (click)="switchComponent('portfolio')"
+      [ngClass]="{ 'option': activeComponent !== 'portfolio', 'selected': activeComponent === 'portfolio' }">Portfolio</mat-list-item>
+      <mat-list-item  (click)="switchComponent('djwebdev')"
+      [ngClass]="{ 'option': activeComponent !== 'djwebdev', 'selected': activeComponent === 'djwebdev' }">_DJWebDev</mat-list-item>
+    </mat-list>
+  </div>
+  <div main>
+    <div [ngSwitch]="activeComponent">
+      <div *ngSwitchCase="'home'">
+          <app-home></app-home>
+      </div>
+      <div *ngSwitchCase="'about'">
+        <app-about></app-about>
+      </div>
+      <div *ngSwitchCase="'resume'">
+        <app-resume></app-resume>
+      </div>
+      <div *ngSwitchCase="'portfolio'">
+        <app-portfolio></app-portfolio>
+      </div>
+      <div *ngSwitchCase="'djwebdev'">
+        <app-djwebdev></app-djwebdev>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

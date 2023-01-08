@@ -1,0 +1,56 @@
+[container] {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 15px;
+  background-color: none;
+}
+
+[container] {
+  margin: 0;
+  font-family: "VCR";
+  text-transform: uppercase;
+  color: white;
+  font-size: 35px;
+  height: 100vh;
+  width: 100%;
+  background-color: #0103f1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  //font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// [container]:after {
+//   content: "";
+//   //background-image: url(../assets/images/vhsStatic5_basic_adjusted.gif);
+//   background-size: cover;
+//   background-color: #0103f1;
+//   opacity: 0.2;
+//   position: fixed;
+//   height: 100%;
+//   width: 100%;
+// }
+
+// Side Drawer
+[side] {
+  padding-left: 0.5em;
+  border-right: 2px solid white;
+}
+
+[main] {
+  margin: 0 auto;
+}
+
+.option {
+  font-family: 'VCR';
+  font-size: 35px;
+  color: white;
+}
+
+.selected {
+  font-family: 'VCR';
+  font-size: 35px;
+  display: flex;
+  color: yellow;
+}
+
+
